@@ -1,0 +1,14 @@
+{
+  "icons": [
+    {
+      "src": "img/favigon/tesla_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/favigon/tesla_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
