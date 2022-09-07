@@ -15,22 +15,26 @@ const links = document.querySelectorAll(".more-links");
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
 const twoLink = document.querySelector(".two-link");
+const loader = document.querySelector(".loader-overlay");
 
+// preloader
+/////////////////////////////////////////////
+// preloader
+window.addEventListener("load", () => {
+  loader.classList.add("hidden");
+});
 const obs0 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
-    if (ent.intersectionRatio === 1) {
+
+    if (ent.isIntersecting === true) {
       one.textContent = "Model 3";
-      //   changingChracter.textContent = "Y";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "50px",
   }
 );
 obs0.observe(headerOneEl);
@@ -38,17 +42,14 @@ const obs1 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     // console.log(ent);
-    if (ent.intersectionRatio === 1) {
+    if (ent.isIntersecting === true) {
       one.textContent = "Model Y";
-      //   changingChracter.textContent = "Y";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "50px",
   }
 );
 obs1.observe(headerTwoEl);
@@ -56,18 +57,15 @@ obs1.observe(headerTwoEl);
 const obs2 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
+
     if (ent.isIntersecting === true) {
       one.textContent = "Model S";
-      //   changingChracter.textContent = "S";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "-80px",
   }
 );
 obs2.observe(headerThreeEl);
@@ -75,20 +73,15 @@ obs2.observe(headerThreeEl);
 const obs3 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
+
     if (ent.isIntersecting === true) {
       one.textContent = "Model X";
-      // two.textContent = "Order Online For";
-      // twoLink.textContent = "Touchless Delivery";
-      //   changingChracter.textContent = "X";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "-80px",
   }
 );
 obs3.observe(headerFourEl);
@@ -96,38 +89,30 @@ obs3.observe(headerFourEl);
 const obs4 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
+
     if (ent.isIntersecting === true) {
       one.textContent = "Solar panels";
-      // two.textContent = "Order Online For";
-      // twoLink.textContent = "";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "-80px",
   }
 );
 obs4.observe(headerFiveEl);
 const obs5 = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
+
     if (ent.isIntersecting === true) {
       one.textContent = "Solar Roof";
-      // two.textContent = "Order Online For";
-      // twoLink.textContent = "";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "-80px",
   }
 );
 obs5.observe(headerSixEl);
@@ -137,16 +122,12 @@ const obs6 = new IntersectionObserver(
     // console.log(ent);
     if (ent.isIntersecting === true) {
       one.textContent = "Accessories";
-      // two.textContent = "Order Online For";
-      // twoLink.textContent = "";
     }
   },
   {
-    // scrolling just in the viewport
     root: null,
-    // threshold will activate when 0 percent of the view port in acheive
+
     threshold: 0,
-    // rootMargin: "-80px",
   }
 );
 obs6.observe(headerSevenEl);
